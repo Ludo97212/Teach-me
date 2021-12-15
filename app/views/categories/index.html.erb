@@ -1,10 +1,15 @@
 <div class="container">
+<%# NAVBAR %>
   <h1>Welcome to TEACH ME!</h1>
+  <h2>Discover our differents lectures</h2>
   <ul>
       <% @categories.each do |category| %>
-        <div class="card">
-          <li><%= link_to category.name, category_path(category) %></li>
-        </div>
+          <li>
+            <div class="card">
+            <%= link_to category.name, category_path(category) %>
+             <%# <%= cl_image_tag category.photo.key, height: 200, width: 280, crop: :fill %> %>
+            </div>
+          </li>
       <% end %>
   </ul>
 </div>
