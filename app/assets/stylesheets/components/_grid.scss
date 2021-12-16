@@ -1,41 +1,59 @@
-.grid {
+.grid-categories {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 25px;
   margin-top: 25px;
 }
 
+.grid-lectures {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 15px;
+  margin-top: 25px;
+}
+
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
-  .grid {
+  .grid-categories {
+    grid-template-columns: 1fr;
+  }
+  .grid-lectures {
     grid-template-columns: 1fr;
   }
 }
-
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
-  .grid {
+  .grid-ategories {
     grid-template-columns: 1fr;
   }
-}
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
-  .grid {
+  .grid-lectures {
     grid-template-columns: 1fr 1fr;
   }
 }
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
-  .grid {
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .grid-categories {
+    grid-template-columns: 1fr 1fr;
+  }
+  .grid-lectures {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
-
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .grid-categories {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .grid-lectures {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
-  .grid {
+  .grid-categories {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+  .grid-lectures {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }

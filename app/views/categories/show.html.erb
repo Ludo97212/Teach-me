@@ -3,10 +3,15 @@
 </div>
 
 <div class="container">
-  <div class="card">
+  <div class="grid-lectures">
     <% @category.lectures.each do |lecture| %>
-        <p><strong><%=lecture.name %></strong></p>
-        <p><small><%= lecture.description %></small></p>
+    <div class="card-lecture">
+        <%= cl_image_tag lecture.photo.key, crop: :fill %>
+        <div class="card-lectures-infos">
+          <h2><%= lecture.name %> [ <%= lecture.price %> EUR ]</h2>
+          <p><small><%= lecture.description %></small></p> %>
+        </div>
     <% end %>
+    </div>
   </div>
 </div>
