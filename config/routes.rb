@@ -5,7 +5,6 @@ Rails.application.routes.draw do
   # Ludo : Test pour ajouter images aux categories
   resources :categories, except: [:edit, :update]
   # --------------------------------
-
   resources :lectures, only: [:index, :show, :new, :create] do
     resources :paniers, only: [:show, :new, :create]
   end
