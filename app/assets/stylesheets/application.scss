@@ -11,3 +11,8 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+// li sans puces
+ul {
+  list-style: none;
+}
