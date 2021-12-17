@@ -7,4 +7,8 @@ class PaniersController < ApplicationController
     @panier.save
     redirect_to lecture_path(@lecture)
   end
+
+  def index
+    @paniers = Panier.where(user: current_user)
+  end
 end
