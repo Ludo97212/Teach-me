@@ -6,6 +6,10 @@ Rails.application.routes.draw do
   resources :lectures, only: [:index, :show] do
     resources :paniers, only: [:create]
   end
-  resources :paniers, only: [:index]
+  resources :paniers, only: [:index] do
+    member do
+      get :thanks
+    end
+  end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

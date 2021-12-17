@@ -11,4 +11,8 @@ class PaniersController < ApplicationController
   def index
     @paniers = Panier.where(user: current_user)
   end
+
+  def thanks
+    @paniers = Panier.where(user: current_user)
+  end
 end

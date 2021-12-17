@@ -8,7 +8,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Lecture.create(name: "La gamme majeure", description: "Notions de base", price: 14.99, category_id: 6)
 Lecture.create(name: "Word", description: "Utilisation duntraitement de texte de Windows", price: 12.99, category_id: 4)
-=======
 
 
 # file = File.open('app/assets/images/.jpg')
@@ -57,5 +56,3 @@ file = File.open('app/assets/images/Divers.jpg')
 category = Category.new(name: 'Divers / Autres')
 category.photo.attach(io: file, filename: 'Divers.jpg', content_type: 'image/png')
 category.save
-
-
