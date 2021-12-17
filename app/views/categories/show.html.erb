@@ -1,0 +1,17 @@
+<div class="banner-show" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @category.photo.key, crop: :fill %>')">
+  <h1> <%= @category.name %> </h1>
+</div>
+
+<div class="container">
+  <div class="grid-lectures">
+    <% @category.lectures.each do |lecture| %>
+    <div class="card-lecture">
+        <%= cl_image_tag lecture.photo.key, crop: :fill %>
+        <div class="card-lectures-infos">
+          <h2><%= lecture.name %> [ <%= lecture.price %> EUR ]</h2>
+          <p><small><%= lecture.description %></small></p> %>
+        </div>
+    <% end %>
+    </div>
+  </div>
+</div>

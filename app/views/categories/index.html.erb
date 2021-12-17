@@ -1,0 +1,29 @@
+<%# NAVBAR %>
+<div class="banner-home" style="background-color: #389480">
+    <h1>Bienvenue sur TEACH ME!</h1>
+</div>
+
+<div class="container">
+  <h2>Découvrez nos differentes catégories de cours</h2>
+  <ul>
+  <div class="grid-categories">
+      <% @categories.each do |category| %>
+          <li>
+            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path category.photo.key, crop: :fill %>')">
+            <%= link_to category.name, category_path(category) %>
+            </div>
+          </li>
+      <% end %>
+  </div>
+  </ul>
+</div>
+
+<div class="footer" style="background-color: #389480">
+  <div class="footer-infos">
+    <a href="/">En savoir plus sur nous</a>
+    <a href="/">Nous contacter</i></a>
+  </div>
+  <div class="footer-thanks">
+    Nous sommes contents de vous voir !
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<div class="container">
+<h2>Changes</h2>
+  <%= form_for(@category) do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.file_field :photo, as: :file %>
+    <%= f.submit %>
+  <% end %>
+  <br>
+  <br>
+  <%= link_to "Annuler", category_path(@category) %>
+</div>
