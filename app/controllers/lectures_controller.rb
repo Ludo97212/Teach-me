@@ -9,8 +9,9 @@ class LecturesController < ApplicationController
 
   def create
     @lecture = Lecture.new(lecture_params)
+    @lecture.category_id = @category_id
     @lecture.save
-    redirect_to category_path
+    redirect_to root_path
   end
 
   private
