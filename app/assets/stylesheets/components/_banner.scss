@@ -17,6 +17,17 @@
   opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   }
+  .btn {
+    margin-top: 20px;
+    color: white;
+    background-color: #5b8671;
+    border-radius: 20px;
+    font-weight: lighter;
+    &:hover {
+      background-color: #5b8671;
+      opacity: 0.5;
+    }
+  }
 }
 
 
