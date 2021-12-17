@@ -1,0 +1,13 @@
+<div class="banner-show" style="background-color: blueviolet;">
+  <h1>Mon panier</h1>
+</div>
+<div class="container ">
+  <% @paniers.each do |panier| %>
+    <ul>
+      <li><%= panier.lecture.name %> - <%= panier.lecture.price %> €</li>
+    </ul>
+  <% end %>
+  <div class="d-flex justify-content-end">
+    <p><%= link_to "Valider", thanks_paniers_path %></p>
+  </div>
+</div>

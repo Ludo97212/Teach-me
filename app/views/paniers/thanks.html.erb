@@ -1,0 +1,10 @@
+<div class="banner-show" style="background-color: green;">
+  <h1>Merci d'avoir choisi nos cours 😀</h1>
+</div>
+<div class="container ">
+  <% current_user.lectures.each do |lecture| %>
+    <ul>
+      <li><%= lecture.name %> - <%= link_to "Accéder au cours", lecture_path(lecture) %></li>
+    </ul>
+  <% end %>
+</div>
