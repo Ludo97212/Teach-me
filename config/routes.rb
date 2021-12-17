@@ -3,11 +3,11 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :categories, only: [:index, :show]
-  resources :lectures, only: [:index, :show] do
+  resources :lectures, only: [:index, :show, :new, :create] do
     resources :paniers, only: [:create]
   end
   resources :paniers, only: [:index] do
-    member do
+    collection do
       get :thanks
     end
   end
