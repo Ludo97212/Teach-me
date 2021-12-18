@@ -1,8 +1,18 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: whitesmoke;
+  background: linear-gradient(to right, rgb(231, 231, 233), white);
   h2 {
     padding-left: 50px;
+    color: #389480;
+  }
+  a {
+    opacity: 0.7;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  p {
+    color: black;
   }
 }
 
@@ -12,4 +22,11 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+#navbarDropdown {
+  opacity: 0.3;
+  &:hover {
+    opacity: 0.8;
+  }
 }
