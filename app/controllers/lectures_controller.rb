@@ -14,12 +14,13 @@ class LecturesController < ApplicationController
   def create
     @lecture = Lecture.new(lecture_params)
     @lecture.category_id = @category_id
+    # @lecture.category = @category.find(params[:category_id])
     redirect_to root_path
   end
 
   private
 
   def lecture_params
-    params.require(:lecture).permit(:name, :description, :price, :category, :photo)
+    params.require(:lecture).permit(:name, :description, :price, :photo)
   end
 end
