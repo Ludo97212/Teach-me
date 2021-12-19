@@ -10,16 +10,19 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-    <li class="nav-item">
     <% if current_user == nil %>
+      <li class="nav-item">
         <%= link_to "S'inscrire", new_user_registration_path, class: "nav-link" %>
-      <% end %>
       </li>
       <li class="nav-item">
-      <% if current_user == nil %>
         <%= link_to "Se connecter", new_user_session_path, class: "nav-link" %>
+        </li>
+      <% else %>
+        <li>
+          <p>Bonjour <%= current_user.username %> !</p>
+        </li>
       <% end %>
-      </li>
+
       <li class="nav-item">
         <%= link_to "Accueil", "/", class: "nav-link" %>
       </li>
