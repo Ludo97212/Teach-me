@@ -9,7 +9,6 @@ class LecturesController < ApplicationController
 
   def new
     @lecture = Lecture.new
-    # @lecture.category = Category.find(params[:category_id])
   end
 
   def create
