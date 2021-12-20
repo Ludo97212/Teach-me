@@ -1,7 +1,7 @@
-<div class="banner-lecture"><h1 ><%= @lecture.theme %></h1></div>
+<div class="banner-lecture"><h1 ><%= @lecture.thematic %></h1></div>
   <div class="container">
-    <div class="add-lecture-category"><%= @lecture.category %></div>
-    <div class="add-lecture-category"><%= @lecture.price %></div>
+    <div class="add-lecture-category"><%= @lecture.category.name %></div>
+    <div class="add-lecture-category"><%= @lecture.price %> €</div>
 
     <div class="card-description">
       <div class="img-circle"><%= image_tag("")%></div>
@@ -13,7 +13,7 @@
 
     <div class="card-description"><h2>Que saurez-vous faire à l'issue de cette formation ? </h2><br><br>
 
-      <p><%= @lecture.main_objective %></p>
+      <p><%= @lecture.description %></p>
     </div>
 
 
@@ -50,6 +50,6 @@
     <div class="card-description">
 
       <h2>Vérifions ce que vous avez retenu !</h2><br><br>
-      <p><%= lecture.evaluation %></p>
+      <p><%= @lecture.evaluation %></p>
     </div>
   </div>
