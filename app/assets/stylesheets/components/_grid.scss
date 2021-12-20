@@ -7,7 +7,7 @@
 
 .grid-lectures {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 15px;
   margin-top: 25px;
 }
@@ -27,7 +27,7 @@
     grid-template-columns: 1fr;
   }
   .grid-lectures {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 }
 // Medium devices (tablets, 768px and up)
@@ -36,7 +36,7 @@
     grid-template-columns: 1fr 1fr;
   }
   .grid-lectures {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 }
 // Large devices (desktops, 992px and up)
@@ -45,7 +45,7 @@
     grid-template-columns: 1fr 1fr 1fr;
   }
   .grid-lectures {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 // Extra large devices (large desktops, 1200px and up)
@@ -54,6 +54,6 @@
     grid-template-columns: 1fr 1fr 1fr;
   }
   .grid-lectures {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
