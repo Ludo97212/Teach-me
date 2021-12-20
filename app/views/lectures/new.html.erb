@@ -1,7 +1,14 @@
 <div class="container">
   <%= simple_form_for @lecture do |f| %>
+    <%= f.input :thematic %>
     <%= f.input :name %>
     <%= f.input :description %>
+    <%= f.input :public %>
+    <%= f.input :prerequis %>
+    <%= f.input :educational_objective %>
+    <%= f.input :mean %>
+    <%= f.input :program %>
+    <%= f.input :evaluation %>
     <%= f.input :price %>
     <%= f.association :category %>
     <%= f.input :photo, as: :file %>

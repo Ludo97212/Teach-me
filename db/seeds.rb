@@ -14,6 +14,7 @@
 # category.photo.attach(io: file, filename: '.jpg', content_type: 'image/png')
 # category.save
 
+Lecture.destroy_all
 Category.destroy_all
 
 file = File.open('app/assets/images/francais.jpg')
