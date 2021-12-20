@@ -1,6 +1,10 @@
 <div class="banner-home" style="background-color: #389480">
     <h1>Bienvenue sur TEACH ME!</h1>
-    <h2><%= link_to "Ajoutez votre cours", new_lecture_path, class: "btn" %></h2>
+    <% if current_user != nil %>
+      <h2><%= link_to "Ajoutez votre cours", new_lecture_path, class: "btn" %></h2>
+    <% else %>
+      <h2><%= link_to "Ajoutez votre cours", new_user_session_path, class: "btn" %></h2>
+    <% end %>
 </div>
 
 <div class="container">
@@ -21,8 +25,8 @@
 
 <div class="footer" style="background-color: #389480">
   <div class="footer-infos">
-    <a href="/">En savoir plus sur nous</a>
-    <a href="/">Nous contacter</i></a>
+    <a href="https://fr.lipsum.com/">En savoir plus sur nous</a>
+    <a href="https://fr.lipsum.com/">Nous contacter</i></a>
   </div>
   <div class="footer-thanks">
     Nous sommes contents de vous voir !

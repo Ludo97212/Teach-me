@@ -11,7 +11,6 @@ class CategoriesController < ApplicationController
     @category = Category.new(category_params)
     if @category.save
       redirect_to category_path(@category)
-      # redirect_to root_path(@category)
     else
       render :new
     end
@@ -19,7 +18,7 @@ class CategoriesController < ApplicationController
 
   def show
     @category = Category.find(params[:id])
-    @lectures = Lecture.where(category_id: @category.id)
+    @category.lectures = Lecture.where(category_id: @category.id)
   end
 
   def edit
