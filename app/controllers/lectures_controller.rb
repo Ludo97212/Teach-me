@@ -21,6 +21,8 @@ class LecturesController < ApplicationController
   private
 
   def lecture_params
-    params.require(:lecture).permit(:name, :description, :price, :category_id, :photo)
+    params.require(:lecture)
+          .permit(:thematic, :name, :description, :public, :prerequis, :educational_objective,
+                  :mean, :program, :evaluation, :price, :category_id, :photo)
   end
 end
