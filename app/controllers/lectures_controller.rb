@@ -9,16 +9,12 @@ class LecturesController < ApplicationController
 
   def new
     @lecture = Lecture.new
-    # @lecture.category = Category.find(params[:category])
   end
 
   def create
-    # Plutot créer cours dans catégories pour ID caté
     @lecture = Lecture.new(lecture_params)
-    @lecture.category_id = :category_id
-    # @lecture.category_id = @category_id
     @lecture.save
-    redirect_to lecture_path(@lecture)
+    redirect_to category_path(@lecture.category_id)
   end
 
   private
