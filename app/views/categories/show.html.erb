@@ -8,10 +8,14 @@
     <div class="card-lecture">
         <%= cl_image_tag lecture.photo.key, crop: :fill %>
         <div class="card-lectures-infos">
-          <h2><%= lecture.name %> [ <%= lecture.price %> EUR ]</h2>
+          <h2><%= link_to lecture.name, root_path %></h2>
           <p><small><%= lecture.description %></small></p>
+          <h6><strong><%= lecture.price %> €</strong></h6>
         </div>
-    <% end %>
+        <div class="btn-infos" style="d-flex">
+            <%= link_to "+ d'infos", lecture_path(lecture) %>
+        </div>
     </div>
+    <% end %>
   </div>
 </div>

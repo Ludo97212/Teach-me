@@ -19,7 +19,6 @@ class CategoriesController < ApplicationController
   def show
     @category = Category.find(params[:id])
     @category.lectures = Lecture.where(category_id: @category.id)
-    # @lectures = Lecture.new
   end
 
   def edit
