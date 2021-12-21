@@ -13,7 +13,7 @@
 # category = Category.new(name: '')
 # category.photo.attach(io: file, filename: '.jpg', content_type: 'image/png')
 # category.save
-
+Panier.destroy_all
 Lecture.destroy_all
 Category.destroy_all
 
