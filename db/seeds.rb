@@ -17,6 +17,21 @@
 Lecture.destroy_all
 Category.destroy_all
 
+file = File.open('app/assets/images/cuisine.jpg')
+category = Category.new(name: 'Cuisine')
+category.photo.attach(io: file, filename: 'cuisine.jpg', content_type: 'image/png')
+category.save
+
+file = File.open('app/assets/images/video.jpg')
+category = Category.new(name: 'Montage Vidéo')
+category.photo.attach(io: file, filename: 'video.jpg', content_type: 'image/png')
+category.save
+
+file = File.open('app/assets/images/coaching.jpg')
+category = Category.new(name: 'Coaching Sportif')
+category.photo.attach(io: file, filename: 'coaching.jpg', content_type: 'image/png')
+category.save
+
 file = File.open('app/assets/images/francais.jpg')
 category = Category.new(name: 'Francais')
 category.photo.attach(io: file, filename: 'francais.jpg', content_type: 'image/png')
@@ -55,4 +70,9 @@ category.save
 file = File.open('app/assets/images/Divers.jpg')
 category = Category.new(name: 'Divers / Autres')
 category.photo.attach(io: file, filename: 'Divers.jpg', content_type: 'image/png')
+category.save
+
+file = File.open('app/assets/images/couture.jpg')
+category = Category.new(name: 'Couture')
+category.photo.attach(io: file, filename: 'couture.jpg', content_type: 'image/png')
 category.save
