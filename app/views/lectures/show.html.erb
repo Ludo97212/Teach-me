@@ -8,8 +8,8 @@
           <div class="card-description">
             <div class="img-circle"><%= image_tag("")%></div>
               <ul>
-                <li><h2>Prénom</h2></li><br><br>
-                <li><h2>Nom</h2></li>
+                <h2><%= @lecture.first_name %> <%= @lecture.last_name %></h2><br><br>
+                <h2> <%= cl_image_tag @lecture.avatar.key, crop: :fill, class:"avatar" %> </h2>
               </ul>
           </div>
 

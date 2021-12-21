@@ -12,9 +12,9 @@
           <p><small><%= lecture.description %></small></p>
         </div>
         <div class="user-references">
+          <%= cl_image_tag lecture.avatar.key, crop: :fill, class:"avatar" %>
           <%= lecture.first_name %>
           <%= lecture.last_name %>
-          <%= cl_image_tag lecture.avatar.key, crop: :fill, class:"avatar" %>
         </div>
         <div class="card-lecture-price">
         <div class="btn-infos" style="d-flex">
