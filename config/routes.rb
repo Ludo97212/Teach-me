@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :lectures, only: [:index, :show, :new, :create] do
     resources :paniers, only: [:create]
   end
-  resources :paniers, only: [:index] do
+  resources :paniers, only: [:index, :destroy] do
     collection do
       get :thanks
     end

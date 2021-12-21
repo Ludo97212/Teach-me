@@ -4,7 +4,7 @@
 <div class="container ">
   <% @paniers.each do |panier| %>
     <ul>
-      <li><%= panier.lecture.name %> - <%= panier.lecture.price %> €</li>
+      <li><%= panier.lecture.thematic %> - <%= panier.lecture.price %> €</li>
     </ul>
   <% end %>
   <div class="d-flex justify-content-end">
