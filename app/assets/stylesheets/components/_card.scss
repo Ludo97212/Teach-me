@@ -68,6 +68,7 @@
   }
   .card-lecture-infos {
     padding: 10px;
+    width: 100%;
   }
   .card-lecture-price {
     width: 100%;
@@ -78,9 +79,11 @@
     width: 100%;
   }
   .user-references {
+    padding-left: 10px;
     display: flex;
     text-align: end;
     flex-direction: row;
+    align-items: center;
   }
 }
 // --------------------------------------------------------
