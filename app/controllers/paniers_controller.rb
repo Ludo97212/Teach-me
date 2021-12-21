@@ -15,6 +15,7 @@ class PaniersController < ApplicationController
   def destroy
     @panier = Panier.find(params[:id])
     @panier.destroy
+    redirect_to lecture_path(Lecture.find(params[:lecture_id]))
   end
 
   def thanks

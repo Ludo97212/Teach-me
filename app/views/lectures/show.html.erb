@@ -61,7 +61,7 @@
         <h2>Panier</h2>
         <% @paniers.each do |panier| %>
           <ul>
-            <li><%= panier.lecture.thematic %> - <%= panier.lecture.price %> € <%= link_to "-", panier_path(panier), method: :delete, class: "btn btn-primary" %></li>
+            <li><%= panier.lecture.thematic %> - <%= panier.lecture.price %> € <%= link_to "-", panier_path(panier.id, lecture_id: params[:id]), method: :delete, class: "btn btn-primary" %></li>
           </ul>
         <% end %>
         <p><%= link_to "Voir mon panier", paniers_path %></p>
