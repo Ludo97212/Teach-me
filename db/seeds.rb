@@ -14,48 +14,63 @@
 # category.photo.attach(io: file, filename: '.jpg', content_type: 'image/png')
 # category.save
 
-# Lecture.destroy_all
-# Category.destroy_all
+Lecture.destroy_all
+Category.destroy_all
 
-# file = File.open('app/assets/images/francais.jpg')
-# category = Category.new(name: 'Francais')
-# category.photo.attach(io: file, filename: 'francais.jpg', content_type: 'image/png')
-# category.save
+file = File.open('app/assets/images/cuisine.jpg')
+category = Category.new(name: 'Cuisine')
+category.photo.attach(io: file, filename: 'cuisine.jpg', content_type: 'image/png')
+category.save
 
-# file = File.open('app/assets/images/mathematiques.jpg')
-# category = Category.new(name: 'Mathématiques')
-# category.photo.attach(io: file, filename: '.jpg', content_type: 'image/png')
-# category.save
+file = File.open('app/assets/images/video.jpg')
+category = Category.new(name: 'Montage Vidéo')
+category.photo.attach(io: file, filename: 'video.jpg', content_type: 'image/png')
+category.save
 
-# file = File.open('app/assets/images/informatique.jpg')
-# category = Category.new(name: 'Informatique')
-# category.photo.attach(io: file, filename: 'informatique.jpg', content_type: 'image/png')
-# category.save
+file = File.open('app/assets/images/coaching.jpg')
+category = Category.new(name: 'Coaching Sportif')
+category.photo.attach(io: file, filename: 'coaching.jpg', content_type: 'image/png')
+category.save
 
-# file = File.open('app/assets/images/sciences.jpg')
-# category = Category.new(name: 'Sciences')
-# category.photo.attach(io: file, filename: 'sciences.jpg', content_type: 'image/png')
-# category.save
+file = File.open('app/assets/images/francais.jpg')
+category = Category.new(name: 'Francais')
+category.photo.attach(io: file, filename: 'francais.jpg', content_type: 'image/png')
+category.save
 
-# file = File.open('app/assets/images/Musique.jpg')
-# category = Category.new(name: 'Musique')
-# category.photo.attach(io: file, filename: 'Musique.jpg', content_type: 'image/png')
-# category.save
+file = File.open('app/assets/images/mathematiques.jpg')
+category = Category.new(name: 'Mathématiques')
+category.photo.attach(io: file, filename: '.jpg', content_type: 'image/png')
+category.save
 
-# file = File.open('app/assets/images/physique.jpg')
-# category = Category.new(name: 'Physique')
-# category.photo.attach(io: file, filename: 'physique.jpg', content_type: 'image/png')
-# category.save
+file = File.open('app/assets/images/informatique.jpg')
+category = Category.new(name: 'Informatique')
+category.photo.attach(io: file, filename: 'informatique.jpg', content_type: 'image/png')
+category.save
 
-# file = File.open('app/assets/images/Langues étrangères.jpg')
-# category = Category.new(name: 'Langues étrangères')
-# category.photo.attach(io: file, filename: 'Langues étrangères.jpg', content_type: 'image/png')
-# category.save
+file = File.open('app/assets/images/sciences.jpg')
+category = Category.new(name: 'Sciences')
+category.photo.attach(io: file, filename: 'sciences.jpg', content_type: 'image/png')
+category.save
 
-# file = File.open('app/assets/images/Divers.jpg')
-# category = Category.new(name: 'Divers / Autres')
-# category.photo.attach(io: file, filename: 'Divers.jpg', content_type: 'image/png')
-# category.save
+file = File.open('app/assets/images/Musique.jpg')
+category = Category.new(name: 'Musique')
+category.photo.attach(io: file, filename: 'Musique.jpg', content_type: 'image/png')
+category.save
+
+file = File.open('app/assets/images/physique.jpg')
+category = Category.new(name: 'Physique')
+category.photo.attach(io: file, filename: 'physique.jpg', content_type: 'image/png')
+category.save
+
+file = File.open('app/assets/images/Langues étrangères.jpg')
+category = Category.new(name: 'Langues étrangères')
+category.photo.attach(io: file, filename: 'Langues étrangères.jpg', content_type: 'image/png')
+category.save
+
+file = File.open('app/assets/images/Divers.jpg')
+category = Category.new(name: 'Divers / Autres')
+category.photo.attach(io: file, filename: 'Divers.jpg', content_type: 'image/png')
+category.save
 
 file = File.open('app/assets/images/couture.jpg')
 category = Category.new(name: 'Couture')
