@@ -12,6 +12,11 @@ class PaniersController < ApplicationController
     @paniers = Panier.where(user: current_user)
   end
 
+  def destroy
+    @panier = Panier.find(params[:id])
+    @panier.destroy
+  end
+
   def thanks
     @paniers = Panier.where(user: current_user)
   end
