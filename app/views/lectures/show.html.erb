@@ -1,68 +1,70 @@
 <div class="banner-lecture"><h1 ><%= @lecture.thematic %></h1></div>
-  <div class="container" style="display: flex;">
-    <div class="details-card" style="flex-grow: 1;">
-        <div class="add-lecture-category"><%= @lecture.category.name %></div>
-        <div class="add-lecture-category"><%= @lecture.price %> €</div>
+<div class="container">
+  <div class="container-lecture">
+      <div class="details-card">
+          <div class="add-lecture-category"><%= @lecture.category.name %></div>
+          <div class="add-lecture-category"><%= @lecture.price %> €</div>
 
-        <div class="card-description">
-          <div class="img-circle"><%= image_tag("")%></div>
-            <ul>
-              <li><h2>Prénom</h2></li><br><br>
-              <li><h2>Nom</h2></li>
-            </ul>
-        </div>
-
-        <div class="card-description"><h2>Que saurez-vous faire à l'issue de cette formation ? </h2><br><br>
-
-          <p><%= @lecture.description %></p>
-        </div>
-
-
-        <div class="card-description">
-          <div>
-            <h2> A qui s'adresse cette formation ?</h2><br><br>
-            <p><%= @lecture.public %></p>
+          <div class="card-description">
+            <div class="img-circle"><%= image_tag("")%></div>
+              <ul>
+                <li><h2>Prénom</h2></li><br><br>
+                <li><h2>Nom</h2></li>
+              </ul>
           </div>
-        </div>
 
-        <div class="card-description">
-          <div>
-            <h2> Que faut-il pour accéder à la formation ?</h2><br><br>
-            <p><%= @lecture.prerequis %></p>
+          <div class="card-description"><h2>Que saurez-vous faire à l'issue de cette formation ? </h2><br><br>
+
+            <p><%= @lecture.description %></p>
           </div>
-        </div>
 
-        <div class="card-description">
-          <h2>En clair, qu'allons nous voir ?</h2><br><br>
-          <p><%= @lecture.educational_objective %></p>
-        </div>
 
-        <div class="card-description">
-          <h2>Nous utiliserons divers moyens pour y parvenir !</h2><br><br>
-          <p><%= @lecture.mean %></p>
-        </div>
+          <div class="card-description">
+            <div>
+              <h2> A qui s'adresse cette formation ?</h2><br><br>
+              <p><%= @lecture.public %></p>
+            </div>
+          </div>
 
-        <div class="card-description">
-          <h2>Voici le déroulé de votre formation :</h2><br><br>
+          <div class="card-description">
+            <div>
+              <h2> Que faut-il pour accéder à la formation ?</h2><br><br>
+              <p><%= @lecture.prerequis %></p>
+            </div>
+          </div>
 
-        <p><%= @lecture.program %></p>
-        </div>
+          <div class="card-description">
+            <h2>En clair, qu'allons nous voir ?</h2><br><br>
+            <p><%= @lecture.educational_objective %></p>
+          </div>
 
-        <div class="card-description">
+          <div class="card-description">
+            <h2>Nous utiliserons divers moyens pour y parvenir !</h2><br><br>
+            <p><%= @lecture.mean %></p>
+          </div>
 
-          <h2>Vérifions ce que vous avez retenu !</h2><br><br>
-          <p><%= @lecture.evaluation %></p>
-        </div>
+          <div class="card-description">
+            <h2>Voici le déroulé de votre formation :</h2><br><br>
+
+            <p><%= @lecture.program %></p>
+          </div>
+
+          <div class="card-description">
+
+            <h2>Vérifions ce que vous avez retenu !</h2><br><br>
+            <p><%= @lecture.evaluation %></p>
+          </div>
+
+          <%= link_to "Ajouter au panier", lecture_paniers_path(@lecture.id), method: :post, class: "btn btn-primary"%>
       </div>
-    </div>
-    <div class="card-panier">
-      <% @paniers.each do |panier| %>
-        <ul>
-          <li><%= panier.lecture.name %> - <%= panier.lecture.price %> €</li>
-        </ul>
-      <% end %>
-      <div class="d-flex justify-content-end">
+      <div class="card-panier">
+        <h2>Panier</h2>
+        <% @paniers.each do |panier| %>
+          <ul>
+            <li><%= panier.lecture.thematic %> - <%= panier.lecture.price %> €</li>
+          </ul>
+        <% end %>
         <p><%= link_to "Voir mon panier", paniers_path %></p>
       </div>
-    </div>
+  </div>
 </div>
