@@ -77,16 +77,16 @@ category = Category.new(name: 'Couture')
 category.photo.attach(io: file, filename: 'couture.jpg', content_type: 'image/png')
 category.save
 
-avatar = File.open('app/assets/images/couture_avatar.jpg')
-photo = File.open('app/assets/images/cours_couture2.jpg')
-lecture = Lecture.new(thematic: 'Prendre ses mesures', category_id: 20, description: 'Prendre ses mesures est une étape essentielle lorsque l on souhaite coudre ses propres vêtements : cela permet de créer des patrons sur-mesure, ou bien de pouvoir choisir la taille exacte de patron de couture que l on souhaite utiliser.', public: 'Toute personne souhaitant apprendre les bases de la couture', prerequis: 'Aucune notion de couture n est exigée, convient au débutant', educational_objective: 'Être capable de prendre ses mesures, étape par étape', mean: 'Pour mener à bien votre projet vous devrez vous équiper d un mètre de couturière, du papier et un ruban de soie', program: 'Nous allons apprendre à : 1/ Marquez la taille. 2/ Mesurez les circonférences. 3/ Mesurez les longueurs. 4/ Mesurez les hauteurs.', evaluation: 'Un relevé de mesure correct vous permettra d estimer le tissus nécessaire à votre prochain projet', price: 12)
-lecture.avatar.attach(io: avatar, filename: 'couture_avatar.jpg', content_type: 'image/png')
-lecture.photo.attach(io: photo, filename: 'cours_couture2.jpg', content_type: 'image/png')
-lecture.save
+# avatar = File.open('app/assets/images/couture_avatar.jpg')
+# photo = File.open('app/assets/images/cours_couture2.jpg')
+# lecture = Lecture.new(thematic: 'Prendre ses mesures', category_id: 20, description: 'Prendre ses mesures est une étape essentielle lorsque l on souhaite coudre ses propres vêtements : cela permet de créer des patrons sur-mesure, ou bien de pouvoir choisir la taille exacte de patron de couture que l on souhaite utiliser.', public: 'Toute personne souhaitant apprendre les bases de la couture', prerequis: 'Aucune notion de couture n est exigée, convient au débutant', educational_objective: 'Être capable de prendre ses mesures, étape par étape', mean: 'Pour mener à bien votre projet vous devrez vous équiper d un mètre de couturière, du papier et un ruban de soie', program: 'Nous allons apprendre à : 1/ Marquez la taille. 2/ Mesurez les circonférences. 3/ Mesurez les longueurs. 4/ Mesurez les hauteurs.', evaluation: 'Un relevé de mesure correct vous permettra d estimer le tissus nécessaire à votre prochain projet', price: 12)
+# lecture.avatar.attach(io: avatar, filename: 'couture_avatar.jpg', content_type: 'image/png')
+# lecture.photo.attach(io: photo, filename: 'cours_couture2.jpg', content_type: 'image/png')
+# lecture.save
 
-avatar = File.open('app/assets/images/bounty_profile.jpg')
-photo = File.open('app/assets/images/bounty_cours1.jpg')
-lecture = Lecture.new(thematic: 'Faire des bounty maison', category_id: 9, description: 'Vous allez apprendre à créer des bounty pour régaler toute la famille', public: 'Tous les gourmands sont les bienvenus', prerequis: 'Niveau facile, convient au débutant', educational_objective: 'Suivre une recette simple grâce à une recette.', program: 'Nous allons apprendre à : 1/ Préparez des ingrédients. 2/ Utilisez différents types de cuission. 3/ Présentez des mets. 4/ Utilisez la cuisson à froid', evaluation: 'Partagez avec vos amis, vous saurez si votre bounty est réussit', price: 8)
-lecture.avatar.attach(io: avatar, filename: 'bounty_profile.jpg', content_type: 'image/png')
-lecture.photo.attach(io: photo, filename: 'bounty_cours1.jpg', content_type: 'image/png')
-lecture.save
+# avatar = File.open('app/assets/images/bounty_profile.jpg')
+# photo = File.open('app/assets/images/bounty_cours1.jpg')
+# lecture = Lecture.new(thematic: 'Faire des bounty maison', category_id: 9, description: 'Vous allez apprendre à créer des bounty pour régaler toute la famille', public: 'Tous les gourmands sont les bienvenus', prerequis: 'Niveau facile, convient au débutant', educational_objective: 'Suivre une recette simple grâce à une recette.', program: 'Nous allons apprendre à : 1/ Préparez des ingrédients. 2/ Utilisez différents types de cuission. 3/ Présentez des mets. 4/ Utilisez la cuisson à froid', evaluation: 'Partagez avec vos amis, vous saurez si votre bounty est réussit', price: 8)
+# lecture.avatar.attach(io: avatar, filename: 'bounty_profile.jpg', content_type: 'image/png')
+# lecture.photo.attach(io: photo, filename: 'bounty_cours1.jpg', content_type: 'image/png')
+# lecture.save
