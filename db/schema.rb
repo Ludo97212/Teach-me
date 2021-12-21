@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_20_183218) do
+ActiveRecord::Schema.define(version: 2021_12_21_161012) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,7 +43,6 @@ ActiveRecord::Schema.define(version: 2021_12_20_183218) do
   end
 
   create_table "lectures", force: :cascade do |t|
-    t.string "name"
     t.text "description"
     t.float "price"
     t.bigint "category_id", null: false
@@ -56,6 +55,8 @@ ActiveRecord::Schema.define(version: 2021_12_20_183218) do
     t.text "mean"
     t.text "program"
     t.text "evaluation"
+    t.string "first_name"
+    t.string "last_name"
     t.index ["category_id"], name: "index_lectures_on_category_id"
   end
 
