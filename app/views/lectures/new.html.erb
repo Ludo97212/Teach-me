@@ -1,8 +1,12 @@
 <div class="container">
   <%= simple_form_for @lecture do |f| %>
+    <%= f.input :avatar, as: :file, :label => "Ajoutez votre avatar" %>
+    <%= f.input :first_name, :label => "Prenom" %>
+    <%= f.input :last_name, :label => "Nom" %>
+    <%= f.association :category %>
     <%= f.input :thematic %>
-    <%= f.input :name %>
     <%= f.input :description %>
+    <%= f.input :photo, as: :file, :label => "Ajoutez une image au cours" %>
     <%= f.input :public %>
     <%= f.input :prerequis %>
     <%= f.input :educational_objective %>
@@ -10,8 +14,6 @@
     <%= f.input :program %>
     <%= f.input :evaluation %>
     <%= f.input :price %>
-    <%= f.association :category %>
-    <%= f.input :photo, as: :file %>
     <%= f.submit "Ajoutez votre cours", class: "btn btn-primary" %>
   <% end %>
 </div>
