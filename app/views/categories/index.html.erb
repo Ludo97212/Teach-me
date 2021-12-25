@@ -3,7 +3,12 @@
     <% if current_user != nil %>
       <h2><%= link_to "Ajoutez votre cours", new_lecture_path, class: "btn" %></h2>
     <% else %>
-      <h2><%= link_to "Ajoutez votre cours", new_user_session_path, class: "btn" %></h2>
+    <%# <h2><%= link_to "Ajoutez votre cours", new_lecture_path, class: "btn" %><%#</h2> %>
+      <h2><small>
+      <%= form_tag categories_path, method: :get do %>
+        <%= text_field_tag :query, params[:query], placeholder: "..." %>
+      <% end %>
+      </small></h2>
     <% end %>
 </div>
 

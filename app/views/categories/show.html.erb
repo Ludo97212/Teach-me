@@ -8,14 +8,10 @@
     Nos cours
   </div>
   <div class="part">
-    <%= form_tag categories_path, method: :get do %>
-    <%= text_field_tag :query,
-      params[:query],
-      class: "form-control",
-      placeholder: "Cherchez un cours"
-    %>
-    <%= submit_tag "Search", class: "btn btn-primary" %>
-<% end %>
+    <%= form_tag category_path, method: :get do %>
+      <%= text_field_tag :query, params[:query] %>
+      <%= submit_tag "o", class: "btn btn-primary" %>
+    <% end %>
   </div>
   <div class="part">
   <%= link_to "Ajoutez votre cours", new_lecture_path, class: "btn btn-success" %>
