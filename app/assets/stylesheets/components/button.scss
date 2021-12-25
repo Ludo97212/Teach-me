@@ -28,3 +28,10 @@
   opacity: 0.5;
   }
 }
+
+.btn-success {
+  color: white;
+  &:hover {
+    background: rgb(150, 235, 116);
+  }
+}

@@ -4,7 +4,7 @@
 <div class="container ">
   <% current_user.lectures.each do |lecture| %>
     <ul>
-      <li><%= lecture.name %> - <%= link_to "Accéder au cours", lecture_path(lecture) %></li>
+      <li><%= lecture.thematic %> - <%= link_to "Accéder au cours", lecture_path(lecture) %></li>
     </ul>
   <% end %>
 </div>

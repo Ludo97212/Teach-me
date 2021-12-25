@@ -1,15 +1,11 @@
 <div class="banner-home" style="background-color: #389480">
     <h1>Bienvenue sur TEACH ME!</h1>
-    <% if current_user != nil %>
-      <h2><%= link_to "Ajoutez votre cours", new_lecture_path, class: "btn" %></h2>
-    <% else %>
-    <%# <h2><%= link_to "Ajoutez votre cours", new_lecture_path, class: "btn" %><%#</h2> %>
-      <h2><small>
-      <%= form_tag categories_path, method: :get do %>
-        <%= text_field_tag :query, params[:query], placeholder: "..." %>
-      <% end %>
-      </small></h2>
+    <h5>
+    <%= form_tag categories_path, method: :get do %>
+      <%= text_field_tag :query, params[:query], placeholder: "...", class: "input-banner" %>
+      <button class="icon"><i class="fa fa-search"></i></button>
     <% end %>
+    </h5>
 </div>
 
 <div class="container">
