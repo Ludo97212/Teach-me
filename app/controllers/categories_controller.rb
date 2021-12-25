@@ -24,6 +24,13 @@ class CategoriesController < ApplicationController
   def show
     @category = Category.find(params[:id])
     @category.lectures = Lecture.where(category_id: @category.id)
+    # if params[:query].present?
+    #   @category = Category.find(params[:id])
+    #   @category.lectures = Lecture.where("thematic ILIKE ?", "%#{params[:query]}% AND #{category_id = @category.id}")
+    # else
+    #   @category = Category.find(params[:id])
+    #   @category.lectures = Lecture.where(category_id: @category.id)
+    # end
   end
 
   def edit
