@@ -14,8 +14,11 @@ class LecturesController < ApplicationController
 
   def create
     @lecture = Lecture.new(lecture_params)
-    @lecture.save
-    redirect_to category_path(@lecture.category_id)
+    if @lecture.save
+      redirect_to category_path(@lecture.category_id)
+    else
+      render :new
+    end
   end
 
   private

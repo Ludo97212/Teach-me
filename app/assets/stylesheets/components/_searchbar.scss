@@ -1,0 +1,14 @@
+.searchbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-right: 50px;
+  margin-top: 50px;
+  margin-bottom: 75px;
+  .part {
+    padding: auto;
+    h2 {
+      font-weight: bold;
+    }
+  }
+}

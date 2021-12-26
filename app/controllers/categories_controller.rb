@@ -1,6 +1,10 @@
 class CategoriesController < ApplicationController
   def index
-    @categories = Category.all
+    if params[:query].present?
+      @categories = Category.where("name ILIKE ?", "%#{params[:query]}%")
+    else
+      @categories = Category.all
+    end
   end
 
   def new
@@ -19,6 +23,13 @@ class CategoriesController < ApplicationController
   def show
     @category = Category.find(params[:id])
     @category.lectures = Lecture.where(category_id: @category.id)
+    # if params[:query].present?
+    #   @category = Category.find(params[:id])
+    #   @category.lectures = Lecture.where("thematic ILIKE ?", "%#{params[:query]}%")
+    # else
+    #   @category = Category.find(params[:id])
+    #   @category.lectures = Lecture.where(category_id: @category.id)
+    # end
   end
 
   def edit

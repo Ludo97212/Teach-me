@@ -54,8 +54,7 @@
             <h2>Vérifions ce que vous avez retenu !</h2><br><br>
             <p><%= @lecture.evaluation %></p>
           </div>
-
-          <%= link_to "Ajouter au panier", lecture_paniers_path(@lecture.id), method: :post, class: "btn btn-primary"%>
+            <%= link_to "Ajouter au panier", lecture_paniers_path(@lecture.id), method: :post, class: "btn btn-primary"%>
       </div>
       <div class="card-panier">
         <h2>Panier</h2>

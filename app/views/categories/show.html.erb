@@ -3,6 +3,24 @@
 </div>
 
 <div class="container">
+  <div class="searchbar">
+    <div class="part">
+    <h3>Nos cours</h3>
+    </div>
+    <div class="part">
+      <%= form_tag category_path, method: :get do %>
+        <%= text_field_tag :query, params[:query], placeholder: "vous recherchez ?", class: "input-banner" %>
+        <button class="icon"><i class="fa fa-search"></i></button>
+      <% end %>
+    </div>
+    <div class="part">
+    <% if current_user != nil %>
+      <%= link_to "Ajoutez votre cours", new_lecture_path, class: "btn btn-success" %>
+    <% else %>
+      <%= link_to "Ajoutez votre cours", new_user_session_path, class: "btn-flat" %>
+    <% end %>
+    </div>
+  </div>
   <div class="grid-lectures">
     <% @category.lectures.each do |lecture| %>
     <div class="card-lecture">
