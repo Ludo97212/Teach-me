@@ -24,6 +24,7 @@
 // --------------------------------------------------
 
 .card-lecture {
+  padding-top: 15px;
   border-radius: 5px;
   overflow: hidden;
   width: 300px;
@@ -34,8 +35,8 @@
   align-items: center;
   img {
     height: 150px;
-    width: 95%;
-    padding-top: 2%;
+    width: 92%;
+    padding-top: 3%;
     object-fit: fill;
   }
   .avatar {
