@@ -24,10 +24,9 @@ class CategoriesController < ApplicationController
     @category = Category.find(params[:id])
     @category.lectures = Lecture.where(category_id: @category.id)
     # if params[:query].present?
-    #   @category = Category.find(params[:id])
-    #   @category.lectures = Lecture.where("thematic ILIKE ?", "%#{params[:query]}%")
+    #   sql_query = "thematic ILIKE :query OR description ILIKE :query"
+    #   @category.lectures = Lecture.where(category_id: @category.id, (sql_query, "%#{params[:query]}%"))
     # else
-    #   @category = Category.find(params[:id])
     #   @category.lectures = Lecture.where(category_id: @category.id)
     # end
   end
